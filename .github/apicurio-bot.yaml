@@ -1,3 +1,23 @@
 ---
 labels:
-  areaLabelColor: "0366d6"
+  areaLabelColor: "FBCA04"
+  triageLabelColor: "D93F0B"
+triage:
+  needsTriageLabel: "triage/needs-triage"
+  defaultNotify:
+    - not_existing_user_87466103897
+  rules:
+    - labels:
+        - area/ui
+      expressions:
+        - '${title.startsWith("ui")}'
+      notify:
+        - jsenko
+    - labels:
+        - area/test
+      patterns:
+        anywhere:
+          - "test\d{3}"
+      notify:
+        - jsenko
+        - not_existing_user_365846120
