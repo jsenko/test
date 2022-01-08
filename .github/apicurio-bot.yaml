@@ -6,6 +6,7 @@ triage:
   needsTriageLabel: "triage/needs-triage"
   defaultNotify:
     - not_existing_user_87466103897
+    - jsenko
   rules:
     - labels:
         - area/ui
@@ -14,10 +15,16 @@ triage:
       notify:
         - jsenko
     - labels:
+        - area/baz
+      expressions:
+        - 'body.startsWith("baz")'
+      notify:
+        - not_existing_user_365846120
+    - labels:
         - area/test
       patterns:
         anywhere:
           - 'test\d{3}'
       notify:
         - jsenko
-        - not_existing_user_365846120
+        - not_existing_user_309896552
