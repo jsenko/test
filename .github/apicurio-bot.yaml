@@ -17,7 +17,7 @@ triage:
         - area/test
       patterns:
         anywhere:
-          - "test\d{3}"
+          - 'test\d{3}'
       notify:
         - jsenko
         - not_existing_user_365846120
