@@ -10,7 +10,7 @@ triage:
     - labels:
         - area/ui
       expressions:
-        - '${title.startsWith("ui")}'
+        - 'title.startsWith("ui")'
       notify:
         - jsenko
     - labels:
